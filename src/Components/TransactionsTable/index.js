@@ -4,7 +4,7 @@ import searchImg from "../../assets/search.svg";
 import { parse, unparse } from 'papaparse';
 import { toast } from 'react-toastify';
 
-function TransactiosTable({transactions, addTransaction, fetchTransactions}) {
+function TransactionsTable({transactions, addTransaction, fetchTransactions}) {
     const {Option} = Select;
     const [search, setSearch] = useState("");
     const [typeFilter, setTypeFilter] = useState("");
@@ -65,7 +65,8 @@ function TransactiosTable({transactions, addTransaction, fetchTransactions}) {
         link.click();
         document.body.removeChild(link);
     }
-
+   
+    
     function importFromCsv(event) {
         event.preventDefault();
         try {
@@ -181,6 +182,6 @@ function TransactiosTable({transactions, addTransaction, fetchTransactions}) {
       
 }
 
-export default TransactiosTable;
+export default TransactionsTable;
 
 
